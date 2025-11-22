@@ -13,7 +13,6 @@
 /* === SEKCE 1: ZÁKLADNÍ NASTAVENÍ A TYPOGRAFIE (GLOBAL) === */
 /* ====================================================================== */
 
-
 /* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&family=Cinzel:wght@400;700&family=Cinzel+Decorative:wght@700&family=Almendra:ital,wght@0,400;0,700;1,400&family=MedievalSharp&family=UnifrakturMaguntia&display=swap');
 
@@ -29,6 +28,20 @@ tw-story {
     transition: background-color 0.5s ease;
 }
 
+tw-story {
+    /* Základní kurzor pro celou hru */
+    cursor: url('https://files.catbox.moe/ukjw0e.png'), auto;
+}
+
+tw-link:hover, button:hover {
+    /* Kurzor při najetí na odkazy a tlačítka */
+    cursor: url('https://files.catbox.moe/8yxfsx.png'), pointer;
+}
+
+/* Volitelně - kurzor i pro samotné odkazy (nejen hover) */
+tw-link {
+    cursor: url('https://files.catbox.moe/8yxfsx.png'), pointer;
+}
 /* ====================================================================== */
 /* === PŘECHODY MEZI PASÁŽEMI (HARLOWE FADE-IN) === */
 /* ====================================================================== */
