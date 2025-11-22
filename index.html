@@ -7284,7 +7284,7 @@ setTimeout(function() {
 (set: $ironShieldSellPrice to 25)
 (set: $towerShieldSellPrice to 45)
 (set: $potionSellPrice to 12)
-(set: $obvazSellPrice to 2)</tw-passagedata><tw-passagedata pid="47" name="Test" tags="hra les" position="525,75" size="100,100">{(set: $gold to 1005)
+(set: $obvazSellPrice to 2)</tw-passagedata><tw-passagedata pid="47" name="Test" tags="hra les" position="575,75" size="100,100">{(set: $gold to 1005)
 [[navštívit nejlepšího Obchodníka se vším|ShopMerchant]]
 (set: $returnPassage to &quot;Test&quot;)
 [[test Souboje|4]]
@@ -7451,7 +7451,7 @@ setTimeout(function() {
   &lt;div class=&quot;battle-hud-hearts&quot;&gt;
     &lt;div class=&quot;bhud-hearts-player&quot;&gt;
       &lt;div class=&quot;bhud-hearts-box&quot;&gt;
-        &lt;span class=&quot;bhud-hearts-label&quot;&gt;Hrdina&lt;/span&gt;
+        &lt;span class=&quot;bhud-hearts-label&quot;&gt;$vybranaPostava&lt;/span&gt;
         &lt;div class=&quot;bhud-hearts-row&quot;&gt;
           (for: each _i, ...(range: 1, $maxHp))[
             (if: _i &lt;= $hp)[
@@ -7865,7 +7865,9 @@ setTimeout(function() {
 Získal jsi postih: **Pohmožděnina (text-colour:#c41e3a)[-1 ATK]**
 
 „Tvé útoky budou slabší, dokud se nevyléčíš. Avšak v reálném boji by prohra znamenala mdloby nebo smrt!&quot; Dodal přísným tónem, vědom si konců válečníků. 
-&lt;div class=&quot;scene-card&quot;&gt;&lt;div class=&quot;dice-container&quot;&gt;&lt;div class=&quot;dice-player-box&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dice-enemy-box&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;background: rgba(255,215,0,0.1); padding: 5px; border-radius: 8px; margin: 5px 0; text-align: center;&quot;&gt;&lt;/div&gt;[[Rozumím!|tutorialKonec]]
+&lt;div class=&quot;scene-card&quot;&gt;&lt;div class=&quot;dice-container&quot;&gt;&lt;div class=&quot;dice-player-box&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dice-enemy-box&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;background: rgba(255,215,0,0.1); padding: 5px; border-radius: 8px; margin: 5px 0; text-align: center;&quot;&gt;&lt;/div&gt;
+
+[[Rozumím!|tutorialKonec]]
 
 &lt;/div&gt;
 
@@ -8291,11 +8293,11 @@ kupců a jejich obránců&lt;/span&gt;&lt;/div&gt;&quot;, &quot;Trh&quot;)
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;div style=&quot;background: rgba(255,215,0,0.1); padding: 5px; border-radius: 8px; margin: 5px 0; text-align: center;&quot;&gt;
-&lt;/div&gt;]
+&lt;/div&gt;
 &lt;/div&gt;(display: &quot;InventoryHUD&quot;)
 [[Podívat se na mapu|vyberlokaci]]
 [[Zajít za učitelem|ucitel]]}
-(display: &quot;SnowAnimation&quot;)</tw-passagedata><tw-passagedata pid="67" name="mec" tags="hra dyka" position="1725,650" size="100,100">{
+(display: &quot;SnowDegreeAnimation&quot;)</tw-passagedata><tw-passagedata pid="67" name="mec" tags="hra dyka" position="1725,650" size="100,100">{
 (set: $finalAtk to $atk)
 (set: $finalStaminaBonus to 0)
 
@@ -8587,8 +8589,8 @@ Lapkova dýka se zanořila do sněhu.
   }
 }
 &lt;/style&gt;
-}</tw-passagedata><tw-passagedata pid="68" name="predmety" tags="hra stan" position="750,825" size="100,100">(display: &quot;ShopWeapons&quot;)</tw-passagedata><tw-passagedata pid="69" name="smrt" tags="hra" position="1425,600" size="100,100">(display: &quot;InventoryHUD&quot;)Padl jsi v boji proti lapkovi. Tvá cesta ochránce zde končí...
-
+}</tw-passagedata><tw-passagedata pid="68" name="predmety" tags="hra stan" position="750,825" size="100,100">(display: &quot;ShopWeapons&quot;)</tw-passagedata><tw-passagedata pid="69" name="smrt" tags="hra mrtvola" position="1425,600" size="100,100">(display: &quot;InventoryHUD&quot;)Padl jsi v boji proti lapkovi. Tvá cesta ochránce zde končí...
+&lt;div class=&quot;scene-card&quot;&gt;&lt;div class=&quot;dice-container&quot;&gt;&lt;div class=&quot;dice-player-box&quot;&gt;&lt;/div&gt;&lt;div class=&quot;dice-enemy-box&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;background: rgba(255,215,0,0.1); padding: 5px; border-radius: 8px; margin: 5px 0; text-align: center;&quot;&gt;&lt;/div&gt;
 (text-style:&quot;italic&quot;)[Konec hry]
 [(text-colour:black)[Restartovat hru]]&lt;restart|(click: ?restart)[(reload
 
@@ -8599,6 +8601,9 @@ Lapkova dýka se zanořila do sněhu.
     (goto: &quot;tutorialLeceni&quot;)
 ]
 
+&lt;div class=&quot;tutorial-pointer-inline&quot; style=&quot;top: 125px; right: 70px;&quot;&gt;
+     &lt;img src=&quot;https://files.catbox.moe/9iog7u.png&quot; alt=&quot;pointer&quot; style=&quot;width: 85px; height: 100px;&quot;&gt;
+&lt;/div&gt;
 
 &lt;div class=&quot;tutorial-pointer-inline&quot; style=&quot;top: 315px; right: 60px;&quot;&gt;
     &lt;div class=&quot;tutorial-pointer-text&quot;&gt;(text-style:&quot;bold&quot;,&quot;italic&quot;)[věci v inventáři]&lt;/div&gt;
@@ -8727,18 +8732,7 @@ $(document).ready(function() {
       &lt;div class=&quot;spark&quot; style=&quot;position: absolute; bottom: 68px; left: 18px; width: 4px; height: 4px; background: #00ffff; border-radius: 50%; box-shadow: 0 0 9px #00ffff, 0 0 13px #00ffff; animation: spark-rise 3.6s infinite ease-out 1s;&quot;&gt;&lt;/div&gt;
       &lt;div class=&quot;spark&quot; style=&quot;position: absolute; bottom: 57px; left: 32px; width: 3px; height: 3px; background: #99ffff; border-radius: 50%; box-shadow: 0 0 8px #99ffff, 0 0 12px #00ffff; animation: spark-rise 3.4s infinite ease-out 1.2s;&quot;&gt;&lt;/div&gt;
       
-      &lt;!-- Jiskry - fialové --&gt;
-      &lt;div class=&quot;spark spark-purple&quot; style=&quot;position: absolute; bottom: 63px; left: 22px; width: 5px; height: 5px; background: #cc00ff; border-radius: 50%; box-shadow: 0 0 10px #cc00ff, 0 0 16px #9900ff; animation: spark-rise 3.7s infinite ease-out 0.3s;&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;spark spark-purple&quot; style=&quot;position: absolute; bottom: 59px; left: 28px; width: 4px; height: 4px; background: #aa00ff; border-radius: 50%; box-shadow: 0 0 9px #aa00ff, 0 0 14px #cc00ff; animation: spark-rise 3.3s infinite ease-out 0.7s;&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;spark spark-purple&quot; style=&quot;position: absolute; bottom: 66px; left: 16px; width: 3px; height: 3px; background: #dd66ff; border-radius: 50%; box-shadow: 0 0 8px #dd66ff, 0 0 12px #cc00ff; animation: spark-rise 3.5s infinite ease-out 1.1s;&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;spark spark-purple&quot; style=&quot;position: absolute; bottom: 61px; left: 33px; width: 4px; height: 4px; background: #bb33ff; border-radius: 50%; box-shadow: 0 0 9px #bb33ff, 0 0 13px #9900ff; animation: spark-rise 3.9s infinite ease-out 1.4s;&quot;&gt;&lt;/div&gt;
-      
-      &lt;!-- Jiskry - zeleno-modré --&gt;
-      &lt;div class=&quot;spark spark-green&quot; style=&quot;position: absolute; bottom: 64px; left: 24px; width: 5px; height: 5px; background: #00ff99; border-radius: 50%; box-shadow: 0 0 10px #00ff99, 0 0 16px #00ffcc; animation: spark-rise 3.4s infinite ease-out 0.5s;&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;spark spark-green&quot; style=&quot;position: absolute; bottom: 56px; left: 19px; width: 4px; height: 4px; background: #00ffcc; border-radius: 50%; box-shadow: 0 0 9px #00ffcc, 0 0 14px #00ff99; animation: spark-rise 3.8s infinite ease-out 0.9s;&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;spark spark-green&quot; style=&quot;position: absolute; bottom: 67px; left: 29px; width: 3px; height: 3px; background: #33ffaa; border-radius: 50%; box-shadow: 0 0 8px #33ffaa, 0 0 12px #00ffcc; animation: spark-rise 3.6s infinite ease-out 1.3s;&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;spark spark-green&quot; style=&quot;position: absolute; bottom: 60px; left: 26px; width: 4px; height: 4px; background: #66ffbb; border-radius: 50%; box-shadow: 0 0 9px #66ffbb, 0 0 13px #00ff99; animation: spark-rise 4s infinite ease-out 1.6s;&quot;&gt;&lt;/div&gt;
-      
+
       &lt;!-- Záře plamene --&gt;
       &lt;div style=&quot;position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 120px; height: 120px; background: radial-gradient(circle, rgba(0,255,255,0.5) 0%, rgba(0,212,212,0.3) 40%, transparent 70%); border-radius: 50%; animation: glow-pulse 2s ease-in-out infinite;&quot;&gt;&lt;/div&gt;
       
@@ -8884,78 +8878,78 @@ $(document).ready(function() {
 
 /* Houpání plamene */
 @keyframes sway {
-  0%, 100% { transform: translateX(-50%) rotate(-3deg); }
-  50% { transform: translateX(-50%) rotate(3deg); }
+  0%, 100% { transform: translateX(-50%) rotate(-3deg); }
+  50% { transform: translateX(-50%) rotate(3deg); }
 }
 
-/* Blesky stoupají nahoru místo jisker */
-@keyframes lightning-rise {
-  0% {
-    transform: translateY(0) scaleY(1);
-    opacity: 1;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1000px) scaleY(3);
-    opacity: 0;
-  }
+/* OPRAVENO: Přidáno/Přejmenováno pro aktivaci jiskření */
+@keyframes spark-rise {
+  0% {
+    transform: translateY(50) scaleY(3);
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px) scaleY(1.5); 
+    opacity: 0;
+  }
 }
 
 /* Pulzující záře */
 @keyframes glow-pulse {
-  0%, 100% { 
-    opacity: 0.6; 
-    transform: translateX(-50%) scale(1);
-  }
-  50% { 
-    opacity: 0.9; 
-    transform: translateX(-50%) scale(1.15);
-  }
+  0%, 100% { 
+    opacity: 0.6; 
+    transform: translateX(-50%) scale(1);
+  }
+  50% { 
+    opacity: 0.9; 
+    transform: translateX(-50%) scale(1.15);
+  }
 }
 
-/* Kouř stoupá 6x výš než předtím */
+/* UPRAVENO: Kouř stoupá - Realističtější posun a vyšší počáteční neprůhlednost */
 @keyframes smoke-rise {
-  0% {
-    transform: translate(-50%, 0) scale(0.8);
-    opacity: 0.8;
-  }
-  15% {
-    opacity: 0.7;
-  }
-  100% {
-    transform: translate(calc(-50% + random() * 120px - 60px), -3600px) scale(6);
-    opacity: 0;
-  }
+  0% {
+    transform: translate(350%, 0) scale(0.8);
+    opacity: 0.9; /* Zvýšená počáteční neprůhlednost */
+  }
+  15% {
+    opacity: 0.8;
+  }
+  100% {
+    /* Sníženo z -3600px na -500px a náhodný posun upraven */
+    transform: translate(calc(-50% + 50px), -500px) scale(3);
+    opacity: 0;
+  }
 }
 
 /* Animace vignetace - pulzování */
 @keyframes vignette-pulse {
-  0%, 100% { 
-    opacity: 0.8;
-  }
-  50% { 
-    opacity: 1;
-  }
+  0%, 100% { 
+    opacity: 0.8;
+  }
+  50% { 
+    opacity: 1;
+  }
 }
 
 /* Animace třpytu z rohů */
 @keyframes corner-flicker {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  25% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.4;
-  }
-  75% {
-    opacity: 0.7;
-  }
+  0%, 100% {
+    opacity: 0.3;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  75% {
+    opacity: 0.7;
+  }
 }
-
 /* Animace sněhových vloček */
 @keyframes snowfall {
   0% {
@@ -9047,6 +9041,7 @@ VÝHODY:
     /* Kontejner pro bojovníky */
     #battle-container {
       position: fixed;
+      opacity: 0.4;
       top: 50%;
       transform: translateY(-50%);
       left: 0;
@@ -9365,7 +9360,7 @@ VÝHODY:
       background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a1a 100%);
     }
 
-    /* Vignetace - Rohový, Tmavě Modrý Kontrast */
+    /* Vignetace - Rohový, Tmavě Modrý Kontrast (Beze změny) */
     #battle-vignette {
       position: fixed;
       top: 0;
@@ -9388,17 +9383,18 @@ VÝHODY:
       animation: vignette-pulse 4s ease-in-out infinite;
     }
 
-    /* Prach - částečky jako sníh ale šedé a menší */
-    #dust-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 3;
-      overflow: hidden;
-    }
+#dust-container {
+    position: fixed;
+    top: 0;
+    left: -1500px; 
+    width: calc(100% + 1500px); 
+        height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+    /* ODSTRANĚNO: Transform už není potřeba, posun je řešen pomocí &#39;left&#39; */
+    /* transform: translateX(-500px); */
+}
 
     #dust-layer {
       position: absolute;
@@ -9407,25 +9403,32 @@ VÝHODY:
       opacity: 0.5;
     }
 
-    .dust-particle {
-      position: absolute;
-      top: -10vh;
-      color: rgba(180, 180, 180, 0.7);
-      font-size: 0.5em;
-      animation-name: dustfall;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      text-shadow: 0 0 2px rgba(180, 180, 180, 0.3);
-      pointer-events: none;
-    }
-
+/* ÚPRAVA: Tvar částeček na šikmé čáry a rotace o 30deg (více ležící) */
+.dust-particle {
+    position: absolute;
+    top: -10vh;
+    color: rgba(180, 180, 180, 0.7);
+    font-size: 0.1em;
+    width: 2px;
+    height: 35px; /* Ponecháno na 35px */
+    background-color: currentColor;
+    transform-origin: bottom center;
+    /* ZMĚNA 1: Nový úhel */
+    transform: rotate(-45deg); 
+    animation-name: dustfall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    text-shadow: 0 0 2px rgba(180, 180, 180, 0.3);
+    pointer-events: none;
+}
+    /* Čárečky různých velikostí */
     .dust-particle-medium {
-      font-size: 0.7em;
+      height: 20px;
       color: rgba(160, 160, 160, 0.6);
     }
 
     .dust-particle-large {
-      font-size: 0.9em;
+      height: 25px;
       color: rgba(140, 140, 140, 0.5);
     }
 
@@ -9437,84 +9440,86 @@ VÝHODY:
         opacity: 1;
       }
     }
-
-    @keyframes dustfall {
-      0% {
-        transform: translateY(-10vh) translateX(0) rotate(0deg);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(110vh) translateX(20px) rotate(360deg);
-        opacity: 0;
-      }
-    }
+/* ÚPRAVA: Směr animace pro -30 stupňů (dolů a doprava, méně strmě) */
+@keyframes dustfall {
+    0% {
+        /* ZMĚNA 2: Start s novým úhlem */
+        transform: translateY(-10vh) translateX(0) rotate(-45deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        /* ZMĚNA 3: Konec s novým úhlem */
+        transform: translateY(110vh) translateX(100vw) rotate(-75deg); 
+        opacity: 0;
+    }
+}
   &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
 
     &lt;div id=&quot;battle-vignette&quot;&gt;&lt;/div&gt;
 
-    &lt;div id=&quot;dust-container&quot;&gt;
+        &lt;div id=&quot;dust-container&quot;&gt;
     &lt;div id=&quot;dust-layer&quot;&gt;
-            &lt;div class=&quot;dust-particle&quot; style=&quot;left: 10%; animation-delay: 0s; animation-duration: 5s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 20%; animation-delay: 1s; animation-duration: 6s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 30%; animation-delay: 2s; animation-duration: 5.5s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 40%; animation-delay: 0.5s; animation-duration: 6.5s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 50%; animation-delay: 1.5s; animation-duration: 5.8s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 60%; animation-delay: 2.5s; animation-duration: 6.8s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 70%; animation-delay: 0.8s; animation-duration: 6s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 80%; animation-delay: 1.8s; animation-duration: 7s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 90%; animation-delay: 2.8s; animation-duration: 5.2s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 5%; animation-delay: 0.3s; animation-duration: 6.3s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 15%; animation-delay: 1.3s; animation-duration: 5.3s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 25%; animation-delay: 2.3s; animation-duration: 6.9s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 35%; animation-delay: 0.6s; animation-duration: 5.6s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 45%; animation-delay: 1.6s; animation-duration: 6.6s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 55%; animation-delay: 2.6s; animation-duration: 5.9s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 65%; animation-delay: 0.9s; animation-duration: 7s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 75%; animation-delay: 1.9s; animation-duration: 5s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 85%; animation-delay: 2.9s; animation-duration: 6s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 95%; animation-delay: 0.4s; animation-duration: 5.4s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 12%; animation-delay: 1.4s; animation-duration: 7s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 22%; animation-delay: 2.4s; animation-duration: 5.1s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 32%; animation-delay: 0.7s; animation-duration: 6.7s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 42%; animation-delay: 1.7s; animation-duration: 5.7s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 52%; animation-delay: 2.7s; animation-duration: 7s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 62%; animation-delay: 0.2s; animation-duration: 5.2s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 72%; animation-delay: 1.2s; animation-duration: 6.2s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 82%; animation-delay: 2.2s; animation-duration: 5.9s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 92%; animation-delay: 0.1s; animation-duration: 6.2s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 8%; animation-delay: 1.1s; animation-duration: 5.1s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 18%; animation-delay: 2.1s; animation-duration: 6.1s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 28%; animation-delay: 0.9s; animation-duration: 5.5s;&quot;&gt;•&lt;/div&gt;
-      
-            &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 8%; animation-delay: 0.2s; animation-duration: 7s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 22%; animation-delay: 1.2s; animation-duration: 8s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 38%; animation-delay: 2.2s; animation-duration: 7.5s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 52%; animation-delay: 0.7s; animation-duration: 8s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 68%; animation-delay: 1.7s; animation-duration: 7.8s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 82%; animation-delay: 2.7s; animation-duration: 7.5s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 92%; animation-delay: 0.1s; animation-duration: 7.2s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 18%; animation-delay: 1.1s; animation-duration: 7.4s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 42%; animation-delay: 2.1s; animation-duration: 7.9s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 58%; animation-delay: 0.9s; animation-duration: 7.1s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 26%; animation-delay: 1.6s; animation-duration: 7.3s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 74%; animation-delay: 2.6s; animation-duration: 7.6s;&quot;&gt;•&lt;/div&gt;
-      
-            &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 14%; animation-delay: 0.5s; animation-duration: 10s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 32%; animation-delay: 1.5s; animation-duration: 9s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 48%; animation-delay: 2.5s; animation-duration: 11s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 64%; animation-delay: 0.8s; animation-duration: 9.5s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 78%; animation-delay: 1.8s; animation-duration: 10.5s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 88%; animation-delay: 2.8s; animation-duration: 9.2s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 36%; animation-delay: 1.3s; animation-duration: 9.8s;&quot;&gt;•&lt;/div&gt;
-      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 56%; animation-delay: 2.3s; animation-duration: 10.3s;&quot;&gt;•&lt;/div&gt;
+            &lt;div class=&quot;dust-particle&quot; style=&quot;left: 10%; animation-delay: 0s; animation-duration: 5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 20%; animation-delay: 1s; animation-duration: 6s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 30%; animation-delay: 2s; animation-duration: 5.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 40%; animation-delay: 0.5s; animation-duration: 6.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 50%; animation-delay: 1.5s; animation-duration: 5.8s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 60%; animation-delay: 2.5s; animation-duration: 6.8s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 70%; animation-delay: 0.8s; animation-duration: 6s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 80%; animation-delay: 1.8s; animation-duration: 7s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 90%; animation-delay: 2.8s; animation-duration: 5.2s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 5%; animation-delay: 0.3s; animation-duration: 6.3s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 15%; animation-delay: 1.3s; animation-duration: 5.3s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 25%; animation-delay: 2.3s; animation-duration: 6.9s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 35%; animation-delay: 0.6s; animation-duration: 5.6s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 45%; animation-delay: 1.6s; animation-duration: 6.6s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 55%; animation-delay: 2.6s; animation-duration: 5.9s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 65%; animation-delay: 0.9s; animation-duration: 7s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 75%; animation-delay: 1.9s; animation-duration: 5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 85%; animation-delay: 2.9s; animation-duration: 6s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 95%; animation-delay: 0.4s; animation-duration: 5.4s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 12%; animation-delay: 1.4s; animation-duration: 7s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 22%; animation-delay: 2.4s; animation-duration: 5.1s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 32%; animation-delay: 0.7s; animation-duration: 6.7s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 42%; animation-delay: 1.7s; animation-duration: 5.7s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 52%; animation-delay: 2.7s; animation-duration: 7s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 62%; animation-delay: 0.2s; animation-duration: 5.2s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 72%; animation-delay: 1.2s; animation-duration: 6.2s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 82%; animation-delay: 2.2s; animation-duration: 5.9s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 92%; animation-delay: 0.1s; animation-duration: 6.2s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 8%; animation-delay: 1.1s; animation-duration: 5.1s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 18%; animation-delay: 2.1s; animation-duration: 6.1s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 28%; animation-delay: 0.9s; animation-duration: 5.5s;&quot;&gt;&lt;/div&gt;
+      
+            &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 8%; animation-delay: 0.2s; animation-duration: 7s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 22%; animation-delay: 1.2s; animation-duration: 8s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 38%; animation-delay: 2.2s; animation-duration: 7.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 52%; animation-delay: 0.7s; animation-duration: 8s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 68%; animation-delay: 1.7s; animation-duration: 7.8s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 82%; animation-delay: 2.7s; animation-duration: 7.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 92%; animation-delay: 0.1s; animation-duration: 7.2s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 18%; animation-delay: 1.1s; animation-duration: 7.4s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 42%; animation-delay: 2.1s; animation-duration: 7.9s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 58%; animation-delay: 0.9s; animation-duration: 7.1s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 26%; animation-delay: 1.6s; animation-duration: 7.3s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 74%; animation-delay: 2.6s; animation-duration: 7.6s;&quot;&gt;&lt;/div&gt;
+      
+            &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 14%; animation-delay: 0.5s; animation-duration: 10s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 32%; animation-delay: 1.5s; animation-duration: 9s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 48%; animation-delay: 2.5s; animation-duration: 11s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 64%; animation-delay: 0.8s; animation-duration: 9.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 78%; animation-delay: 1.8s; animation-duration: 10.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 88%; animation-delay: 2.8s; animation-duration: 9.2s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 36%; animation-delay: 1.3s; animation-duration: 9.8s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 56%; animation-delay: 2.3s; animation-duration: 10.3s;&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
@@ -9580,8 +9585,8 @@ VÝHODY:
     .dust-particle {
       position: absolute;
       top: -10vh;
-      color: rgba(180, 180, 180, 0.7);
-      font-size: 0.5em;
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.8em;
       animation-name: dustfall;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
@@ -9687,6 +9692,266 @@ VÝHODY:
       &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 56%; animation-delay: 2.3s; animation-duration: 10.3s;&quot;&gt;•&lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;}</tw-passagedata><tw-passagedata pid="79" name="SnowDegreeAnimation" tags="" position="450,25" size="100,100">{&lt;html lang=&quot;cs&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Smíšená Bouře&lt;/title&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;style&gt;
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: &#39;Cinzel&#39;, serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0a0a1a 100%);
+    }
+
+    /* 1. Vignetace - Rohový, Tmavě Modrý Kontrast */
+    #battle-vignette {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 2;
+      background: 
+        radial-gradient(circle at 10% 10%, transparent 40%, rgba(0, 0, 80, 0.9) 80%, rgba(0, 0, 0, 1) 100%), 
+        radial-gradient(circle at 90% 10%, transparent 40%, rgba(0, 0, 80, 0.9) 80%, rgba(0, 0, 0, 1) 100%), 
+        radial-gradient(circle at 10% 90%, transparent 40%, rgba(0, 0, 80, 0.9) 80%, rgba(0, 0, 0, 1) 100%), 
+        radial-gradient(circle at 90% 90%, transparent 40%, rgba(0, 0, 80, 0.9) 80%, rgba(0, 0, 0, 1) 100%); 
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+      animation: vignette-pulse 4s ease-in-out infinite;
+    }
+
+    /* 2. Kontejner pro DEŠŤ/PRACH (Posunutý doleva a zvětšený) */
+    #dust-container {
+        position: fixed;
+        top: 0;
+        left: -1500px; 
+        width: calc(100% + 1500px); 
+        height: 100%;
+        pointer-events: none;
+        z-index: 4; 
+        overflow: hidden;
+    }
+    
+    /* 3. Kontejner pro SNÍH (Neposunutý) */
+    #snow-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 3; 
+        overflow: hidden;
+    }
+
+    #dust-layer, #snow-layer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    
+    #dust-layer { opacity: 0.5; }
+    #snow-layer { opacity: 0.4; } 
+
+    /* STYLING PRASHOVÝCH ČÁSTEČEK (ČÁRKY) */
+    .dust-particle {
+        position: absolute;
+        top: -10vh;
+        color: rgba(180, 180, 180, 0.7);
+        font-size: 0.1em;
+        width: 2px;
+        height: 35px; 
+        background-color: currentColor;
+        transform-origin: bottom center;
+        transform: rotate(-65deg); 
+        animation-name: dustfall;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        text-shadow: 0 0 2px rgba(180, 180, 180, 0.3);
+        pointer-events: none;
+    }
+
+    .dust-particle-medium { height: 20px; color: rgba(160, 160, 160, 0.6); }
+    .dust-particle-large { height: 25px; color: rgba(140, 140, 140, 0.5); }
+    
+    /* STYLING SNĚHOVÝCH VLOČEK */
+    .snowflake {
+      position: absolute;
+      top: -10vh;
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 1em;
+      animation-name: snowfall; /* Default: pomalý, krouživý pád */
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+    
+    .snowflake-medium { font-size: 1.5em; color: rgba(255, 255, 255, 0.7); }
+    
+    /* Velké vločky - Nastavení velikosti */
+    .snowflake-large { 
+    
+        font-size: 2.2em;
+        color: rgba(255, 255, 255, 0.4); 
+    }
+    
+    /* ZAJIŠŤUJE RYCHLOU, ŠIKMOU ANIMACI pro VŠECHNY TŘÍDY */
+    .snowflake-fast {
+        animation-name: dustfall !important; /* Použije animaci deště/prachu a PŘEPÍŠE pomalou */
+        transform: rotate(-65deg); /* Přidání šikmé transformace pro vločky */
+    }
+
+
+    /* ANIMACE */
+    @keyframes vignette-pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.5; }
+    }
+
+    /* ANIMACE DEŠTĚ/PRACHU a RYCHLÝCH VLOČEK (Rychlá, strmá, -65deg) */
+    @keyframes dustfall {
+        0% {
+            transform: translateY(-10vh) translateX(0) rotate(-65deg);
+            opacity: 0;
+        }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% {
+            transform: translateY(110vh) translateX(100vw) rotate(-65deg); 
+            opacity: 0;
+        }
+    }
+
+    /* PŮVODNÍ ANIMACE POMALÉHO SNĚHU (POUŽÍVÁ SE JEN POKUD NENÍ TŘÍDA .snowflake-fast) */
+    @keyframes snowfall {
+      0% {
+        transform: translateY(-10vh) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% {
+        transform: translateY(110vh) translateX(20px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id=&quot;battle-vignette&quot;&gt;&lt;/div&gt;
+
+        &lt;div id=&quot;dust-container&quot;&gt;
+      &lt;div id=&quot;dust-layer&quot;&gt;
+            &lt;div class=&quot;dust-particle&quot; style=&quot;left: 10%; animation-delay: 0s; animation-duration: 2.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 20%; animation-delay: 1s; animation-duration: 3s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 30%; animation-delay: 2s; animation-duration: 2.75s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 40%; animation-delay: 0.5s; animation-duration: 3.25s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 50%; animation-delay: 1.5s; animation-duration: 2.9s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 60%; animation-delay: 2.5s; animation-duration: 3.4s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 70%; animation-delay: 0.8s; animation-duration: 3s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 80%; animation-delay: 1.8s; animation-duration: 3.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 90%; animation-delay: 2.8s; animation-duration: 2.6s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 5%; animation-delay: 0.3s; animation-duration: 3.15s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 15%; animation-delay: 1.3s; animation-duration: 2.65s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 25%; animation-delay: 2.3s; animation-duration: 3.45s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 35%; animation-delay: 0.6s; animation-duration: 2.8s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 45%; animation-delay: 1.6s; animation-duration: 3.3s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 55%; animation-delay: 2.6s; animation-duration: 2.95s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 65%; animation-delay: 0.9s; animation-duration: 3.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 75%; animation-delay: 1.9s; animation-duration: 2.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 85%; animation-delay: 2.9s; animation-duration: 3s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 95%; animation-delay: 0.4s; animation-duration: 2.7s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 12%; animation-delay: 1.4s; animation-duration: 3.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 22%; animation-delay: 2.4s; animation-duration: 2.55s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 32%; animation-delay: 0.7s; animation-duration: 3.35s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 42%; animation-delay: 1.7s; animation-duration: 2.85s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 52%; animation-delay: 2.7s; animation-duration: 3.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 62%; animation-delay: 0.2s; animation-duration: 2.6s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 72%; animation-delay: 1.2s; animation-duration: 3.1s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 82%; animation-delay: 2.2s; animation-duration: 2.95s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 92%; animation-delay: 0.1s; animation-duration: 3.1s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 8%; animation-delay: 1.1s; animation-duration: 2.55s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 18%; animation-delay: 2.1s; animation-duration: 3.05s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle&quot; style=&quot;left: 28%; animation-delay: 0.9s; animation-duration: 2.75s;&quot;&gt;&lt;/div&gt;
+      
+            &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 8%; animation-delay: 0.2s; animation-duration: 3.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 22%; animation-delay: 1.2s; animation-duration: 4s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 38%; animation-delay: 2.2s; animation-duration: 3.75s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 52%; animation-delay: 0.7s; animation-duration: 4s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 68%; animation-delay: 1.7s; animation-duration: 3.9s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 82%; animation-delay: 2.7s; animation-duration: 3.75s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 92%; animation-delay: 0.1s; animation-duration: 3.6s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 18%; animation-delay: 1.1s; animation-duration: 3.7s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 42%; animation-delay: 2.1s; animation-duration: 3.95s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 58%; animation-delay: 0.9s; animation-duration: 3.55s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 26%; animation-delay: 1.6s; animation-duration: 3.65s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-medium&quot; style=&quot;left: 74%; animation-delay: 2.6s; animation-duration: 3.8s;&quot;&gt;&lt;/div&gt;
+      
+            &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 14%; animation-delay: 0.5s; animation-duration: 4.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 32%; animation-delay: 1.5s; animation-duration: 4s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 48%; animation-delay: 2.5s; animation-duration: 4.5s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 64%; animation-delay: 0.8s; animation-duration: 4.25s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 78%; animation-delay: 1.8s; animation-duration: 4.75s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 88%; animation-delay: 2.8s; animation-duration: 4.1s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 36%; animation-delay: 1.3s; animation-duration: 4.4s;&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;dust-particle dust-particle-large&quot; style=&quot;left: 56%; animation-delay: 2.3s; animation-duration: 4.65s;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+    &lt;div id=&quot;snow-container&quot;&gt;
+      &lt;div id=&quot;snow-layer&quot;&gt;
+            &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 10%; animation-delay: 0s; animation-duration: 8s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 20%; animation-delay: 1s; animation-duration: 10s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 30%; animation-delay: 2s; animation-duration: 9s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 40%; animation-delay: 0.5s; animation-duration: 11s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 50%; animation-delay: 1.5s; animation-duration: 8.5s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 60%; animation-delay: 2.5s; animation-duration: 10.5s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 70%; animation-delay: 0.8s; animation-duration: 9.5s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 80%; animation-delay: 1.8s; animation-duration: 11.5s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 90%; animation-delay: 2.8s; animation-duration: 8.8s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 5%; animation-delay: 0.3s; animation-duration: 10.3s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 15%; animation-delay: 1.3s; animation-duration: 9.3s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 25%; animation-delay: 2.3s; animation-duration: 11.3s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 35%; animation-delay: 0.6s; animation-duration: 8.6s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 45%; animation-delay: 1.6s; animation-duration: 10.6s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 55%; animation-delay: 2.6s; animation-duration: 9.6s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 65%; animation-delay: 0.9s; animation-duration: 11.9s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 75%; animation-delay: 1.9s; animation-duration: 8.9s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 85%; animation-delay: 2.9s; animation-duration: 10.9s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 95%; animation-delay: 0.4s; animation-duration: 9.4s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-fast&quot; style=&quot;left: 12%; animation-delay: 1.4s; animation-duration: 11.4s;&quot;&gt;❅&lt;/div&gt;
+        
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 8%; animation-delay: 0.2s; animation-duration: 12s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 22%; animation-delay: 1.2s; animation-duration: 13s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 38%; animation-delay: 2.2s; animation-duration: 11.5s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 52%; animation-delay: 0.7s; animation-duration: 12.5s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 68%; animation-delay: 1.7s; animation-duration: 13.5s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 82%; animation-delay: 2.7s; animation-duration: 11.8s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 92%; animation-delay: 0.1s; animation-duration: 12.8s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 18%; animation-delay: 1.1s; animation-duration: 10.8s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 42%; animation-delay: 2.1s; animation-duration: 13.2s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-medium snowflake-fast&quot; style=&quot;left: 58%; animation-delay: 0.9s; animation-duration: 11.2s;&quot;&gt;❆&lt;/div&gt;
+        
+            &lt;div class=&quot;snowflake snowflake-large snowflake-fast&quot; style=&quot;left: 14%; animation-delay: 0.5s; animation-duration: 5.5s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-large snowflake-fast&quot; style=&quot;left: 32%; animation-delay: 1.5s; animation-duration: 5s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-large snowflake-fast&quot; style=&quot;left: 48%; animation-delay: 2.5s; animation-duration: 6.5s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-large snowflake-fast&quot; style=&quot;left: 64%; animation-delay: 0.8s; animation-duration: 5.25s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-large snowflake-fast&quot; style=&quot;left: 78%; animation-delay: 1.8s; animation-duration: 5.75s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-large snowflake-fast&quot; style=&quot;left: 88%; animation-delay: 2.8s; animation-duration: 4.8s;&quot;&gt;❆&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-large snowflake-fast&quot; style=&quot;left: 36%; animation-delay: 1.3s; animation-duration: 5.1s;&quot;&gt;❅&lt;/div&gt;
+        &lt;div class=&quot;snowflake snowflake-large snowflake-fast&quot; style=&quot;left: 56%; animation-delay: 2.3s; animation-duration: 5.4s;&quot;&gt;❆&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
